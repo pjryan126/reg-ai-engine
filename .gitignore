@@ -1,0 +1,70 @@
+# ==============================================================================
+# reg-ai-engine: Production .gitignore (Air-Gapped Enterprise Compliance)
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. Secrets, Certificates & Local Environment Overrides
+# ------------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pfx
+*.crt
+*.p12
+
+# ------------------------------------------------------------------------------
+# 2. Python Virtual Environments & Runtime Artifacts
+# ------------------------------------------------------------------------------
+.venv/
+venv/
+env/
+ENV/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# ------------------------------------------------------------------------------
+# 3. Packaging & Distribution (uv / Build Artifacts)
+# ------------------------------------------------------------------------------
+dist/
+build/
+*.egg-info/
+.eggs/
+*.whl
+
+# ------------------------------------------------------------------------------
+# 4. Developer Tooling & Testing Caches (Ruff, Mypy, Pytest)
+# ------------------------------------------------------------------------------
+.ruff_cache/
+.mypy_cache/
+.pytest_cache/
+.deepeval_cache/
+.coverage
+htmlcov/
+coverage.xml
+
+# ------------------------------------------------------------------------------
+# 5. Local Vector Storage, Model Weights & Local Databases
+# Prevents committing local Qdrant vectors, HuggingFace caches, or tenant DBs
+# ------------------------------------------------------------------------------
+data/
+storage/
+models/
+downloads/
+*.sqlite
+*.db
+.cache/
+
+# ------------------------------------------------------------------------------
+# 6. OS & IDE Metadata
+# ------------------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+.idea/
+*.swp
+*.swo
