@@ -30,6 +30,10 @@ dev = [
 # Tool Configurations
 # ------------------------------------------------------------------------------
 
+# Tell Hatchling where the root Python package lives
+[tool.hatch.build.targets.wheel]
+packages = ["src/reg_ai_engine"]
+
 [tool.ruff]
 target-version = "py311"
 line-length = 100
